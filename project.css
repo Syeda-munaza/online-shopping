@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Navigation bar */
+#navbar {
+  display: flex;
+  align-items: center;
+  background-color: rgb(51, 35, 65);
+  position: relative;
+  padding: 0.5rem 2rem;
+}
+
+#logo img {
+  height: 3rem;
+  width: 4rem;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+#navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 2.5rem;
+  gap: 3rem;
+  flex-grow: 1;
+}
+
+#navbar ul li {
+  list-style: none;
+  font-size: 1.3rem;
+}
+
+#navbar ul li a {
+  color: antiquewhite;
+  text-decoration: none;
+}
+
+#navbar ul li a:hover {
+  color: rgb(62, 38, 30);
+  background-color: rgb(181, 158, 202);
+  border: 2px solid black;
+}
+
+/* HOME SECTION */
+#home {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0.1875rem 12.5rem;
+  background-image: url(pic1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40rem;
+  align-items: center;
+}
+
+.h-primary {
+  font-size: 2.8rem;
+  color: rgb(125, 44, 44);
+  font-family: "Poppins", serif;
+  text-align: center;
+}
+
+#home p {
+  color: rgb(37, 33, 29);
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.btn {
+  padding: 0.375rem 1.25rem;
+  border: 2px solid white;
+  background-color: rgb(207, 107, 107);
+  color: antiquewhite;
+  margin: auto;
+  font-size: 1.5rem;
+  border-radius: 5rem;
+  margin-top: 3rem;
+}
+
+#home .btn {
+  color: rgb(217, 217, 235);
+  cursor: pointer;
+}
+
+#home .btn:hover {
+  color: black;
+  background-color: brown;
+}
+
+/* services section */
+.h-secondary {
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+#services {
+  display: flex;
+  margin: 2.125rem;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+}
+
+#services .box {
+  border: 2px solid rgb(67, 52, 33);
+  padding: 2.125rem;
+  margin: 0.1875rem 0.375rem;
+  border-radius: 1.75rem;
+  background-color: burlywood;
+  width: 30%;
+  text-align: center;
+}
+
+#services .box img {
+  height: 9.375rem;
+  width: auto;
+  margin: auto;
+  display: block;
+  padding-bottom: 1rem;
+}
+
+#services .box h2,
+#services .box p {
+  font-size: 1.2rem;
+}
+
+#services .box p {
+  font-size: 1rem;
+}
+
+/* Mobile and Tablet styles */
+@media (max-width: 1200px) {
+  #home {
+    padding: 0.1875rem 8rem;
+    height: auto;
+  }
+
+  .h-primary {
+    font-size: 2.2rem;
+  }
+
+  #navbar ul {
+    gap: 2rem;
+  }
+
+  #services .box {
+    width: 45%; /* Make boxes take more space on larger tablets */
+  }
+
+  #services .box h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 992px) {
+  #navbar ul {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  #home {
+    padding: 0.1875rem 4rem;
+  }
+
+  .h-primary {
+    font-size: 2rem;
+  }
+
+  #services .box {
+    width: 48%;
+  }
+
+  #services .box h2 {
+    font-size: 1.3rem;
+  }
+
+  #services .box p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #navbar ul {
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  #home {
+    padding: 0.1875rem 2rem;
+    height: auto;
+  }
+
+  .h-primary {
+    font-size: 1.8rem;
+  }
+
+  #services .box {
+    width: 100%; /* Each box takes full width */
+    margin-bottom: 1.5rem;
+  }
+
+  #services .box img {
+    height: 6rem;
+  }
+
+  .btn {
+    font-size: 1.3rem;
+    padding: 0.25rem 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #navbar ul {
+    font-size: 1.1rem;
+  }
+
+  .h-primary {
+    font-size: 1.6rem;
+  }
+
+  #home p {
+    font-size: 1.2rem;
+  }
+
+  #services .box {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+    padding: 0.3rem 1.1rem;
+  }
+}
